@@ -12,7 +12,7 @@ export { default as Measurement } from './Measurement';
 export { default as Cart } from './Cart';
 export { default as ProductView } from './ProductView';
 export { default as Checkout } from './Checkout';
-export { default as RecentOrders } from './Recentorders';
+export { default as RecentOrders } from './RecentOrders';
 export { default as Favourites } from './Favourites';
 export { default as Settings } from './Settings';
 export { default as AskAI } from './AskAI';
