@@ -18,7 +18,7 @@ function Loginpage() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    axios.post("http://localhost:5000/api/auth/login", { email, password }).then((res) => {
+    axios.post("${import.meta.env.VITE_API_URL}/auth/login", { email, password }).then((res) => {
       Login({...res.data});
       setMessage("Login successful");
       setTimeout(() => {
@@ -44,7 +44,7 @@ function Loginpage() {
           <div className="d-flex justify-content-center mb-3">
             <GoogleLogin
               onSuccess={credentialResponse => {
-                axios.post("http://localhost:5000/api/auth/oauth-login", {
+                axios.post("${import.meta.env.VITE_API_URL}/auth/oauth-login", {
                   token: credentialResponse.credential
                 }).then((res) => {
                   setMessage("Login successful");
