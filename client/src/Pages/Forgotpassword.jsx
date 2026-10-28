@@ -67,7 +67,7 @@ function ForgotPassword() {
     setLoading(true);
 
     try {
-        await axios.post("${import.meta.env.VITE_API_URL}/mail/send-forgot-password-email", { email });
+        await axios.post(`${import.meta.env.VITE_API_URL}/mail/send-forgot-password-email`, { email });
         setSubmitted(true);
     } catch {
       setError("Something went wrong. Please try again.");

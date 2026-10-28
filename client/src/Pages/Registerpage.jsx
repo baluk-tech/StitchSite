@@ -57,7 +57,7 @@ function Registerpage() {
 
     const user = { name, email, password };
 
-    axios.post("${import.meta.env.VITE_API_URL}/auth/register", user).then((res) => {
+    axios.post(`${import.meta.env.VITE_API_URL}/auth/register`, user).then((res) => {
       setMessage(res.data.message);
       setTimeout(() => {
         navigate("/login");
@@ -76,7 +76,7 @@ function Registerpage() {
           <div className="d-flex justify-content-center mb-3">
             <GoogleLogin 
               onSuccess={credentialResponse => {
-                axios.post("${import.meta.env.VITE_API_URL}/auth/oauth-login", {
+                axios.post(`${import.meta.env.VITE_API_URL}/auth/register`, {
                   token: credentialResponse.credential
                 }).then((res) => {
                   localStorage.setItem("token", res.data.token);
