@@ -24,11 +24,17 @@ function Loginpage() {
       setTimeout(() => {
         navigate("/home");
       }, 2000)
+      // Login success block-kulla ippadi maathunga:
       if (res.data.role === "admin") {
-        setMessage("Admin login successful");
-        setTimeout(() => {
-          navigate("/admin/dashboard"); // 👈 Updated Admin route to match new setup
-        }, 2000)
+          setMessage("Admin login successful");
+          setTimeout(() => {
+              navigate("/admin/dashboard");
+          }, 2000);
+      } else {
+          setMessage("Login successful");
+          setTimeout(() => {
+              navigate("/home");
+          }, 2000);
       }
     }).catch((err) => {
       setMessage("Login failed. Please check your email and password.");

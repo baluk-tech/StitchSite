@@ -183,6 +183,26 @@ function LandingPage() {
                 tailors stitch it to perfection. Custom fit. Your style.
               </p>
 
+              <div className="mb-4 pe-lg-4">
+                <Link to="/home" className="btn w-100 d-flex justify-content-center align-items-center gap-2" style={{
+                  background: 'linear-gradient(45deg, #1E1E50, #2E2E70)',
+                  border: '1px solid #5B4AE8',
+                  color: 'white',
+                  padding: '14px 24px',
+                  borderRadius: '12px',
+                  fontWeight: '600',
+                  letterSpacing: '0.5px',
+                  boxShadow: '0 4px 15px rgba(91, 74, 232, 0.2)',
+                  transition: 'all 0.3s ease'
+                }}>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                  </svg>
+                  Go to Home
+                </Link>
+              </div>
+
               <div className="d-flex flex-wrap gap-3">
                 <Link to="/signup" className="btn-hero-primary">
                   Get Started <ArrowRight />
